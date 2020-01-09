@@ -5,14 +5,14 @@ import org.springframework.web.bind.annotation.RestController;
 //@RestController
 public class Restaurant {
 
+    private final long id;
     private final String address;
     private final String name;
-    private final long id;
 
-    public Restaurant(String name, String address, long id) {
+    public Restaurant(long id, String name, String address) {
+        this.id = id;
         this.name = name;
         this.address = address;
-        this.id = id;
     }
 
     public String getName() {
